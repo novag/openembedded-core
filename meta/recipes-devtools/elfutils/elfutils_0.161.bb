@@ -48,6 +48,9 @@ SRC_URI += "\
 "
 inherit autotools gettext
 
+CFLAGS_class-native += " -Wno-error=misleading-indentation -Wno-error=nonnull-compare"
+CFLAGS_class-nativesdk += " -Wno-error=misleading-indentation -Wno-error=nonnull-compare"
+
 EXTRA_OECONF = "--program-prefix=eu- --without-lzma"
 EXTRA_OECONF_append_class-native = " --without-bzlib"
 EXTRA_OECONF_append_libc-uclibc = " --enable-uclibc"
